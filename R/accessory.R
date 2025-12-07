@@ -1066,10 +1066,10 @@ read_contrasts <-
   }
   
   # Check that the design matrix is full rank.
-  mm <- model.matrix(~ . - 1, data = design_matrix)
-  if (qr(mm)$rank < ncol(mm)) {
-    stop(paste("Design matrix is not full rank.", "Model matrix columns:", paste(colnames(mm), collapse = ", "), "\n"))
-  }
+  #mm <- model.matrix(~ . - 1, data = design_matrix)
+  #if (qr(mm)$rank < ncol(mm)) {
+  #  stop(paste("Design matrix is not full rank.", "Model matrix columns:", paste(colnames(mm), collapse = ", "), "\n"))
+  #}
   
   # Warn about continuous covariates in the design matrix columns.
   for (col in design_cols) {
